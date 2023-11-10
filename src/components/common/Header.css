@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  background: #1477d4;
+  padding: 0.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* This spreads the items to opposite ends */
+  width: 100%; /* Ensure the navbar spans the full width of the header */
+  align-items: center; /* Align items vertically */
+  gap: 20px;
+}
+
+.logo-img {
+  height: auto; /* Maintain aspect ratio */
+  width: 8rem; /* Adjust width as needed */
+}
+
+.navbar {
+  display: flex;
+
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.login-menu {
+  display: flex;
+  align-items: center; /* Align items in the login-menu vertically */
+}
+
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #ddd;
+}
+
+/* Hover animation for navigation items */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px; /* Adjust distance from bottom */
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
